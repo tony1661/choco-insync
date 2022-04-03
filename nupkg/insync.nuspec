@@ -8,7 +8,7 @@
     <owners>Tony Fernandez</owners>
     <licenseUrl>https://www.insynchq.com/terms</licenseUrl>
     <projectUrl>https://www.insynchq.com/</projectUrl>
-    <iconUrl>https://github.com/tony1661/choco-insync/assets/icon.png</iconUrl>
+    <iconUrl>https://github.com/tony1661/choco-insync/raw/main/assets/icon.png</iconUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <description>*This package provides a commercial software with 15 day free trial. Pricing details are available [here](https://www.insynchq.com/pricing).*
 
