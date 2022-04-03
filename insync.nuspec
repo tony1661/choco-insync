@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>insync</id>
+    <version>3.7.3.50326</version>
+    <title>Insync</title>
+    <authors>Insync</authors>
+    <owners>Benedetto Polimeni</owners>
+    <licenseUrl>https://www.insynchq.com/terms</licenseUrl>
+    <projectUrl>https://www.insynchq.com/</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/benplm/au-packages/master/insync/icon.png</iconUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>*This package provides a commercial software with 15 day free trial. Pricing details are available [here](https://www.insynchq.com/pricing).*
+
+Insync is a feature-rich client that syncs Google Drive files to and from your desktop.
+
+## Features
+
+* Multiple accounts
+* Selective sync
+* Convert Google Docs to Office or OpenDocument
+* Symlink, junction and alias
+* External and network drives
+* Desktop interface with notifications and feed of file changes
+* On-demand shared files syncing
+* Revert read-only files
+* Feed of file changes
+* Revert read-only files</description>
+    <summary>Feature-rich Google Drive client for your desktop.</summary>
+    <releaseNotes>[Changelog](https://forums.insynchq.com/c/releases)</releaseNotes>
+    <copyright>© 2022 Insync</copyright>
+    <tags>insync google drive cloud</tags>
+    <packageSourceUrl>https://github.com/benplm/au-packages/tree/master/insync/</packageSourceUrl>
+    <docsUrl>https://forums.insynchq.com/c/documentation/</docsUrl>
+    <bugTrackerUrl>https://forums.insynchq.com/c/bugs-issues/windows-bugs-issues</bugTrackerUrl>
+  </metadata>
+</package>

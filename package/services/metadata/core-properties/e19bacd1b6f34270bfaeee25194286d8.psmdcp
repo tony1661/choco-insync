@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?><coreProperties xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.openxmlformats.org/package/2006/metadata/core-properties"><dc:creator>Insync</dc:creator><dc:description>*This package provides a commercial software with 15 day free trial. Pricing details are available [here](https://www.insynchq.com/pricing).*
+
+Insync is a feature-rich client that syncs Google Drive files to and from your desktop.
+
+## Features
+
+* Multiple accounts
+* Selective sync
+* Convert Google Docs to Office or OpenDocument
+* Symlink, junction and alias
+* External and network drives
+* Desktop interface with notifications and feed of file changes
+* On-demand shared files syncing
+* Revert read-only files
+* Feed of file changes
+* Revert read-only files</dc:description><dc:identifier>insync</dc:identifier><version>1.5.5.37367</version><keywords>insync google drive cloud</keywords><dc:title>Insync</dc:title><lastModifiedBy>choco, Version=0.10.11.0, Culture=neutral, PublicKeyToken=79d02ea9cad655eb;Microsoft Windows NT 10.0.17134.0;.NET Framework 4</lastModifiedBy></coreProperties>
