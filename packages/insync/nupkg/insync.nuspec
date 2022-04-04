@@ -30,7 +30,7 @@ Insync is a feature-rich client that syncs Google Drive files to and from your d
     <releaseNotes>[Changelog](https://forums.insynchq.com/c/releases)</releaseNotes>
     <copyright>© 2022 Insync</copyright>
     <tags>insync google drive cloud</tags>
-    <packageSourceUrl>https://github.com/tony1661/chocolatey-repos</packageSourceUrl>
+    <packageSourceUrl>https://github.com/tony1661/chocolatey-repos/tree/main/packages/insync</packageSourceUrl>
     <docsUrl>https://forums.insynchq.com/c/documentation/</docsUrl>
     <bugTrackerUrl>https://forums.insynchq.com/c/bugs-issues/windows-bugs-issues</bugTrackerUrl>
   </metadata>
