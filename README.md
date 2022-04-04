@@ -1,2 +1,2 @@
-# choco-insync
-My repo for the chocolatey package 'insync' that I maintain.
+# chocolatey-repos
+My repo for the chocolatey packages I maintain.
