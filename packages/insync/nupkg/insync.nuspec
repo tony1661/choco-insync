@@ -8,7 +8,7 @@
     <owners>Tony Fernandez</owners>
     <licenseUrl>https://www.insynchq.com/terms</licenseUrl>
     <projectUrl>https://www.insynchq.com/</projectUrl>
-    <iconUrl>https://github.com/tony1661/choco-insync/raw/main/assets/icon.png</iconUrl>
+    <iconUrl>https://github.com/tony1661/chocolatey-repos/raw/main/icons/insync.png</iconUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <description>*This package provides a commercial software with 15 day free trial. Pricing details are available [here](https://www.insynchq.com/pricing).*
 
@@ -30,7 +30,7 @@ Insync is a feature-rich client that syncs Google Drive files to and from your d
     <releaseNotes>[Changelog](https://forums.insynchq.com/c/releases)</releaseNotes>
     <copyright>© 2022 Insync</copyright>
     <tags>insync google drive cloud</tags>
-    <packageSourceUrl>https://github.com/tony1661/choco-insync</packageSourceUrl>
+    <packageSourceUrl>https://github.com/tony1661/chocolatey-repos</packageSourceUrl>
     <docsUrl>https://forums.insynchq.com/c/documentation/</docsUrl>
     <bugTrackerUrl>https://forums.insynchq.com/c/bugs-issues/windows-bugs-issues</bugTrackerUrl>
   </metadata>
