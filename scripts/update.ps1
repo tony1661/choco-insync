@@ -21,12 +21,10 @@ $nupkgFile = "$packageName.$version.nupkg"
 (Get-Content $nuspecFile) -Replace '<version>.*</version>',"<version>$version</version>" | Set-Content $nuspecFile
 
 #Download setup file
-#Start-BitsTransfer -Source $downloadLink -Destination $downloadedFile
+Start-BitsTransfer -Source $downloadLink -Destination $downloadedFile
 
 # get setup file SHA256 hash
 $fileHash = (Get-FileHash $downloadedFile -Algorithm SHA256).Hash
-Write-Output $fileHash
-Write-Output $installFile
 
 #update the install script
 (Get-Content $installFile) -Replace "https://.*", "$downloadLink'" | Set-Content $installFile
@@ -36,3 +34,7 @@ Write-Output $installFile
 Compress-Archive -Path $packageFolder -DestinationPath $zipFile -Force
 Remove-Item -Path $zipFileFull
 Rename-Item -Path  $zipFile -NewName $nupkgFile
+
+#next instructions
+Write-Output "When you are ready, enter the following command: "
+Write-Output "choco push .\$nupkgFile --source https://push.chocolatey.org/"
