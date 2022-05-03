@@ -2,8 +2,8 @@
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
 $packageName  = 'insync'
-$url32        = 'https://d2t3ff60b2tol4.cloudfront.net/builds/Insync-3.7.5.50350.exe'
-$checksum32   = '14fdf271f83070f3f12d6b65b884260e69940466ef174c9110ceee9f9347d203'
+$url32        = 'https://d2t3ff60b2tol4.cloudfront.net/builds/Insync-3.7.6.50356.exe'
+$checksum32   = '30432F84C4E66887EC8EA1155DCE3F623B7363F62B7AEC55876A8ED1CB2D3B74'
 
 $packageArgs = @{
   packageName   = $packagename
