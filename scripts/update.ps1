@@ -23,7 +23,7 @@ $nupkgFile = "$packageName.$version.nupkg"
 
 #Download setup file
 Write-Output "Downloading newest executable"
-#Start-BitsTransfer -Source $downloadLink -Destination $downloadedFile
+Start-BitsTransfer -Source $downloadLink -Destination $downloadedFile
 
 # get setup file SHA256 hash
 $fileHash = (Get-FileHash $downloadedFile -Algorithm SHA256).Hash
