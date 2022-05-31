@@ -2,7 +2,8 @@
 #
 # Usage: update.ps1 packageName newVersionNum downloadLink
 # Example: .\update.ps1 insync 3.7.6.50356 "https://d2t3ff60b2tol4.cloudfront.net/builds/Insync-3.7.6.50356.exe"
-
+# to allow scripting run: Set-ExecutionPolicy RemoteSigned
+# to disable scripting run: Set-ExecutionPolicy Restricted
 #assign input arguments to variables
 $packageName = $args[0]
 $version = $args[1]
@@ -21,18 +22,23 @@ $nupkgFile = "$packageName.$version.nupkg"
 (Get-Content $nuspecFile) -Replace '<version>.*</version>',"<version>$version</version>" | Set-Content $nuspecFile
 
 #Download setup file
-Start-BitsTransfer -Source $downloadLink -Destination $downloadedFile
+Write-Output "Downloading newest executable"
+#Start-BitsTransfer -Source $downloadLink -Destination $downloadedFile
 
 # get setup file SHA256 hash
 $fileHash = (Get-FileHash $downloadedFile -Algorithm SHA256).Hash
 
 #update the install script
+Write-Output "Updating the install script"
 (Get-Content $installFile) -Replace "https://.*", "$downloadLink'" | Set-Content $installFile
 (Get-Content $installFile) -Replace '[A-Fa-f0-9]{64}', $fileHash | Set-Content $installFile
 
 #Create the nupkg file
+Write-Output "Creating zip file"
 Compress-Archive -Path $packageFolder -DestinationPath $zipFile -Force
+Write-Output "Remove old nupkg file"
 Remove-Item -Path $zipFileFull
+Write-Output "Rename the zip to nupkg"
 Rename-Item -Path  $zipFile -NewName $nupkgFile
 
 #next instructions
