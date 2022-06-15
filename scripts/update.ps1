@@ -44,3 +44,5 @@ Rename-Item -Path  $zipFile -NewName $nupkgFile
 #next instructions
 Write-Output "When you are ready, enter the following command: "
 Write-Output "choco push .\$nupkgFile --source https://push.chocolatey.org/"
+Write-Output "To install this package, enter:"
+Write-Output "cinst insync -source $zipFileFull -version $version"
