@@ -13,17 +13,25 @@ $downloadLink = $args[2]
 $packageFolder = "..\packages\$packageName\nupkg\*"
 $nuspecFile = "..\packages\$packageName\nupkg\$packagename.nuspec"
 $installFile = "..\packages\$packageName\nupkg\tools\chocolateyinstall.ps1"
-$downloadedFile = "~\Downloads\$packageName-$version.exe"
-$zipFile = "~\Downloads\$packageName.$version.zip"
-$zipFileFull = "~\Downloads\$packageName.$version.nupkg"
+$downloadedFile = "$home\Downloads\$packageName-$version.exe"
+$zipFile = "$home\Downloads\$packageName.$version.zip"
+$zipFileFull = "$home\Downloads\$packageName.$version.nupkg"
 $nupkgFile = "$packageName.$version.nupkg"
+$7zipPath = "$env:ProgramFiles\7-Zip\7z.exe"
+
+#Check if 7zip location is correct
+if (-not (Test-Path -Path $7zipPath -PathType Leaf)) {
+    throw "7 zip file '$7zipPath' not found"
+}
+
+Set-Alias 7zip $7zipPath
 
 #overwite the version number
 (Get-Content $nuspecFile) -Replace '<version>.*</version>',"<version>$version</version>" | Set-Content $nuspecFile
 
 #Download setup file
 Write-Output "Downloading newest executable"
-Start-BitsTransfer -Source $downloadLink -Destination $downloadedFile
+#Start-BitsTransfer -Source $downloadLink -Destination $downloadedFile
 
 # get setup file SHA256 hash
 $fileHash = (Get-FileHash $downloadedFile -Algorithm SHA256).Hash
@@ -35,7 +43,9 @@ Write-Output "Updating the install script"
 
 #Create the nupkg file
 Write-Output "Creating zip file"
-Compress-Archive -Path $packageFolder -DestinationPath $zipFile -Force
+#Compress-Archive -Path $packageFolder -DestinationPath $zipFile -Force
+7zip a $zipFile $packageFolder
+Write-Output "zipfile $zipFile"
 Write-Output "Remove old nupkg file"
 Remove-Item -Path $zipFileFull
 Write-Output "Rename the zip to nupkg"

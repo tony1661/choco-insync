@@ -2,8 +2,8 @@ $ErrorActionPreference = 'Stop';
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
 $packageName  = 'insync'
-$url32        = 'https://d2t3ff60b2tol4.cloudfront.net/builds/Insync-3.7.7.50360.exe'
-$checksum32   = '821CDF2FE5B1EAACB16AD0E34C8AE85C6E084B99896073A08337E7EC26C6791C'
+$url32        = 'https://d2t3ff60b2tol4.cloudfront.net/builds/Insync-3.7.9.50368.exe'
+$checksum32   = '977E179FAB9B236349E85021DE8DE31979C035D0C1335A052672A99EE117E1BE'
 
 $packageArgs = @{
   packageName   = $packagename
