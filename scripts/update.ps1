@@ -47,12 +47,14 @@ Write-Output "Creating zip file"
 7zip a $zipFile $packageFolder
 Write-Output "zipfile $zipFile"
 Write-Output "Remove old nupkg file"
-Remove-Item -Path $zipFileFull
+if (Test-Path $zipFileFull) {
+	Remove-Item -Path $zipFileFull
+}
 Write-Output "Rename the zip to nupkg"
 Rename-Item -Path  $zipFile -NewName $nupkgFile
 
 #next instructions
 Write-Output "When you are ready, enter the following command: "
-Write-Output "choco push .\$nupkgFile --source https://push.chocolatey.org/"
+Write-Output "choco push $($zipFileFull) --source https://push.chocolatey.org/"
 Write-Output "To install this package, enter:"
 Write-Output "cinst insync -source $zipFileFull -version $version"
